@@ -1,235 +1,237 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>MAMA Bike Rental</title>
 
   <style>
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
-  }
-
-  body {
-    background: #fff;
-    color: #111;
-    line-height: 1.6;
-  }
-
-  header {
-    padding: 16px;
-    display: flex;
-    align-items: center;
-    border-bottom: 3px solid #f5c400;
-  }
-
-  .logo {
-    font-size: 22px;
-    font-weight: bold;
-    padding: 6px 12px;
-    border: 2px dashed #111;
-  }
-
-  /* HERO */
-  .hero {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 32px;
-    padding: 56px 20px;
-    align-items: center;
-    max-width: 1200px;
-    margin: auto;
-  }
-
-  .hero h1 {
-    font-size: clamp(28px, 5vw, 42px);
-    margin-bottom: 12px;
-    line-height: 1.2;
-  }
-
-  .hero span {
-    color: #f5c400;
-  }
-
-  .hero p {
-    font-size: 15px;
-    color: #333;
-    max-width: 520px;
-  }
-
-  .hero-image {
-    width: 100%;
-    aspect-ratio: 16 / 9;
-    background: #eee;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 10px;
-    color: #777;
-    font-weight: bold;
-  }
-
-  /* SECTIONS */
-  .section {
-    padding: 56px 20px;
-    max-width: 1100px;
-    margin: auto;
-  }
-
-  .section h2 {
-    text-align: center;
-    margin-bottom: 32px;
-    font-size: clamp(22px, 4vw, 28px);
-    color: #222;
-  }
-
-  /* GRIDS */
-  .services,
-  .fleet {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 24px;
-  }
-
-  .card {
-    background: #fafafa;
-    border: 1px solid #ddd;
-    border-radius: 12px;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-  }
-
-  .card-image,
-  .fleet-image {
-    width: 100%;
-    aspect-ratio: 4 / 3;
-    background: #eaeaea;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #888;
-    font-weight: bold;
-  }
-
-  .card-content,
-  .fleet-content {
-    padding: 16px;
-    font-size: 15px;
-  }
-
-  /* HOW IT WORKS */
-  .how-it-works {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    gap: 20px;
-    text-align: center;
-  }
-
-  .how-it-works div {
-    padding: 18px;
-    border-radius: 10px;
-    border: 1px solid #eee;
-    background: #fff;
-    font-size: 14px;
-  }
-
-  /* CONTACT */
-  .contact {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 28px;
-  }
-
-  .contact-form input,
-  .contact-form textarea {
-    width: 100%;
-    padding: 12px;
-    margin-bottom: 14px;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    font-size: 15px;
-  }
-
-  .contact-form button {
-    padding: 14px;
-    width: 100%;
-    background: #f5c400;
-    border: none;
-    font-weight: bold;
-    cursor: pointer;
-    font-size: 16px;
-    border-radius: 6px;
-  }
-
-  .whatsapp-box {
-    background: #fdf6d8;
-    padding: 24px;
-    border-radius: 12px;
-    text-align: center;
-  }
-
-  .whatsapp-box a {
-    background: #f5c400;
-    color: #000;
-    padding: 14px 18px;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 6px;
-    display: inline-block;
-    margin-top: 12px;
-    font-size: 15px;
-  }
-
-  footer {
-    text-align: center;
-    padding: 24px;
-    border-top: 1px solid #ddd;
-    font-size: 13px;
-    color: #555;
-    margin-top: 40px;
-  }
-
-  /* TABLET */
-  @media (max-width: 900px) {
-    .hero {
-      grid-template-columns: 1fr;
-      text-align: center;
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
     }
 
-    .hero p {
-      margin: auto;
+    body {
+      background: #fff;
+      color: #111;
+      line-height: 1.6;
     }
 
-    .contact {
-      grid-template-columns: 1fr;
-    }
-  }
-
-  /* SMALL PHONES */
-  @media (max-width: 480px) {
     header {
-      justify-content: center;
+      padding: 16px;
+      display: flex;
+      align-items: center;
+      border-bottom: 3px solid #f5c400;
     }
 
     .logo {
-      font-size: 20px;
+      font-size: 22px;
+      font-weight: bold;
+      padding: 6px 12px;
+      border: 2px dashed #111;
     }
 
+    /* HERO */
+    .hero {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+      padding: 56px 20px;
+      align-items: center;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .hero h1 {
+      font-size: clamp(28px, 5vw, 42px);
+      margin-bottom: 12px;
+      line-height: 1.2;
+    }
+
+    .hero span {
+      color: #f5c400;
+    }
+
+    .hero p {
+      font-size: 15px;
+      color: #333;
+      max-width: 520px;
+    }
+
+    .hero-image {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    .hero-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* SECTIONS */
     .section {
-      padding: 44px 16px;
+      padding: 56px 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .section h2 {
+      text-align: center;
+      margin-bottom: 32px;
+      font-size: clamp(22px, 4vw, 28px);
+      color: #222;
+    }
+
+    /* GRIDS */
+    .services,
+    .fleet {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 24px;
+    }
+
+    .card {
+      background: #fafafa;
+      border: 1px solid #ddd;
+      border-radius: 12px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .card-image,
+    .fleet-image {
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      overflow: hidden;
+    }
+
+    .card-image img,
+    .fleet-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
 
     .card-content,
     .fleet-content {
+      padding: 16px;
+      font-size: 15px;
+    }
+
+    /* HOW IT WORKS */
+    .how-it-works {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 20px;
+      text-align: center;
+    }
+
+    .how-it-works div {
+      padding: 18px;
+      border-radius: 10px;
+      border: 1px solid #eee;
+      background: #fff;
       font-size: 14px;
     }
-  }
-</style>
 
+    /* CONTACT */
+    .contact {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 28px;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 14px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 15px;
+    }
+
+    .contact-form button {
+      padding: 14px;
+      width: 100%;
+      background: #f5c400;
+      border: none;
+      font-weight: bold;
+      cursor: pointer;
+      font-size: 16px;
+      border-radius: 6px;
+    }
+
+    .whatsapp-box {
+      background: #fdf6d8;
+      padding: 24px;
+      border-radius: 12px;
+      text-align: center;
+    }
+
+    .whatsapp-box a {
+      background: #f5c400;
+      color: #000;
+      padding: 14px 18px;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 6px;
+      display: inline-block;
+      margin-top: 12px;
+      font-size: 15px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 24px;
+      border-top: 1px solid #ddd;
+      font-size: 13px;
+      color: #555;
+      margin-top: 40px;
+    }
+
+    /* TABLET */
+    @media (max-width: 900px) {
+      .hero {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+
+      .hero p {
+        margin: auto;
+      }
+
+      .contact {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* SMALL PHONES */
+    @media (max-width: 480px) {
+      header {
+        justify-content: center;
+      }
+
+      .logo {
+        font-size: 20px;
+      }
+
+      .section {
+        padding: 44px 16px;
+      }
+
+      .card-content,
+      .fleet-content {
+        font-size: 14px;
+      }
+    }
+  </style>
 </head>
 
 <body>
@@ -243,54 +245,82 @@
     <h1>MAMA <span>BIKE RENTAL</span></h1>
     <p>Your trusted two-wheeler rental solution for daily rides and city travel. Safe, affordable and hassle-free rentals in your area.</p>
   </div>
-  <div class="hero-image">Main Bike Image</div>
+  <div class="hero-image">
+    <img src="hero-bike.jpg" alt="Bike Rental Hero">
+  </div>
 </section>
 
 <section class="section">
   <h2>Our Services</h2>
   <div class="services">
+
     <div class="card">
-      <div class="card-image">Scooter Image</div>
+      <div class="card-image">
+        <img src="scooter.jpg" alt="Scooter Rental">
+      </div>
       <div class="card-content">
         <h3>Scooter Rental</h3>
         <p>Comfortable scooters for daily commute.</p>
         <p><strong>Starting @ ₹25/hr</strong></p>
       </div>
     </div>
+
     <div class="card">
-      <div class="card-image">Bike Image</div>
+      <div class="card-image">
+        <img src="bike.jpg" alt="Bike Rental">
+      </div>
       <div class="card-content">
         <h3>Bike Rental</h3>
         <p>Reliable bikes for city rides.</p>
         <p><strong>Daily @ ₹650/day (example)</strong></p>
       </div>
     </div>
+
     <div class="card">
-      <div class="card-image">Royal Enfield</div>
+      <div class="card-image">
+        <img src="royal-enfield.jpg" alt="Premium Bike Rental">
+      </div>
       <div class="card-content">
         <h3>Premium Bikes</h3>
         <p>Classic & adventure bikes for trips.</p>
         <p><strong>Daily @ ₹750/day (example)</strong></p>
       </div>
     </div>
+
   </div>
 </section>
 
 <section class="section">
   <h2>Our Fleet</h2>
   <div class="fleet">
+
     <div class="card">
-      <div class="fleet-image">Activa / Scooter</div>
-      <div class="fleet-content"><p>Easy, smooth scooters.</p></div>
+      <div class="fleet-image">
+        <img src="fleet-scooter.jpg" alt="Scooter Fleet">
+      </div>
+      <div class="fleet-content">
+        <p>Easy, smooth scooters.</p>
+      </div>
     </div>
+
     <div class="card">
-      <div class="fleet-image">Pulsar / Commuter</div>
-      <div class="fleet-content"><p>City-friendly bikes.</p></div>
+      <div class="fleet-image">
+        <img src="fleet-bike.jpg" alt="Bike Fleet">
+      </div>
+      <div class="fleet-content">
+        <p>City-friendly bikes.</p>
+      </div>
     </div>
+
     <div class="card">
-      <div class="fleet-image">Royal Enfield</div>
-      <div class="fleet-content"><p>Classic & touring bikes.</p></div>
+      <div class="fleet-image">
+        <img src="fleet-royal-enfield.jpg" alt="Royal Enfield Fleet">
+      </div>
+      <div class="fleet-content">
+        <p>Classic & touring bikes.</p>
+      </div>
     </div>
+
   </div>
 </section>
 
@@ -307,12 +337,16 @@
 <section class="section">
   <h2>Contact Us</h2>
   <div class="contact">
+    
     <div class="contact-form">
-      <input type="text" placeholder="Your Name">
-      <input type="email" placeholder="Your Email">
-      <textarea rows="4" placeholder="Your Message"></textarea>
-      <button>Send Message</button>
-    </div>
+  <form id="contactForm">
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="email" name="email" placeholder="Your Email" required>
+    <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
+    <button type="submit">Send Message</button>
+  </form>
+</div>
+
 
     <div class="whatsapp-box">
       <h3>Contact via WhatsApp</h3>
@@ -322,10 +356,34 @@
         📞 Phone: +91 94543 32698
       </p>
     </div>
+
   </div>
 </section>
 
-<footer>© 2026 MAMA Bike Rental. All rights reserved.</footer>
+<footer>
+  © 2026 MAMA Bike Rental. All rights reserved.
+</footer>
 
+  <script>
+  document.getElementById("contactForm").addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const name = this.name.value;
+    const email = this.email.value;
+    const message = this.message.value;
+
+    const subject = encodeURIComponent("Enquiry - MAMA Bike Rental");
+    const body = encodeURIComponent(
+      "Name: " + name + "\n" +
+      "Email: " + email + "\n\n" +
+      "Message:\n" + message
+    );
+
+    window.location.href =
+      "mailto:mamabikerentals@gmail.com?subject=" + subject + "&body=" + body;
+  });
+</script>
+
+  
 </body>
 </html>
